@@ -1,8 +1,12 @@
-# AI Content Idea Generator
+# AI Content Idea Generator - Full Stack Project
 
-A powerful web application that helps content creators, marketers, and social media managers generate fresh and relevant content ideas for their blogs, videos, and social media channels.
+A full-stack web application that helps content creators, marketers, and social media managers generate fresh and relevant content ideas for their blogs, videos, and social media channels using AI.
 
-## 🌟 Features
+## Project Overview
+
+The AI Content Idea Generator is a comprehensive platform that utilizes artificial intelligence to assist users in generating creative and engaging content ideas. The application provides a user-friendly interface to input topics, analyze trends, schedule content, and organize ideas.
+
+## 🌟 Key Features
 
 - **AI-Powered Idea Generation**: Generate creative content ideas based on topics, industries, and target audiences
 - **Trend Analysis**: Identify trending topics and content opportunities in your niche
@@ -11,99 +15,71 @@ A powerful web application that helps content creators, marketers, and social me
 - **User Profiles**: Save favorite ideas and track content performance
 - **Analytics Dashboard**: Visualize content performance and audience engagement
 
-## 🛠️ Tech Stack
+## 📋 Project Structure
 
-### Frontend
-- React.js with TypeScript
-- Material-UI for UI components
-- React Context API for state management
+This project follows a full-stack architecture with separate frontend and backend components:
+
+### Frontend (client/)
+
+- Built with React.js and TypeScript
+- Material-UI for responsive, modern UI components
+- Context API for state management
 - React Router for navigation
-- Axios for API requests
-- Chart.js for analytics visualization
 
-### Backend
+### Backend (server/)
+
 - Node.js with Express.js
-- MongoDB for database
+- MongoDB for database storage
 - JWT for authentication
-- OpenAI API integration
-- Redis for caching
-- REST API architecture
+- OpenAI API integration for content generation
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v16+)
 - npm or yarn
 - MongoDB
-- Redis (optional, for production)
+- OpenAI API key
 
 ### Installation
 
-1. Clone the repository
-```bash
-git clone https://github.com/dxaginfo/ai-content-idea-generation-platform.git
-cd ai-content-idea-generation-platform
-```
+#### Backend Setup
 
-2. Install dependencies for the backend
+1. Navigate to the server directory
 ```bash
 cd server
+```
+
+2. Install dependencies
+```bash
 npm install
 ```
 
-3. Set up environment variables for the backend
-```bash
-cp .env.example .env
-# Edit .env with your credentials
-```
+3. Create a `.env` file based on `.env.example` and add your credentials
 
-4. Install dependencies for the frontend
+4. Start the server
 ```bash
-cd ../client
-npm install
-```
-
-5. Set up environment variables for the frontend
-```bash
-cp .env.example .env
-# Edit .env with your credentials
-```
-
-6. Start the development servers
-```bash
-# In the server directory
 npm run dev
+```
 
-# In the client directory (in a new terminal)
+#### Frontend Setup
+
+1. Navigate to the client directory
+```bash
+cd client
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Create a `.env` file based on `.env.example` and add your API URL
+
+4. Start the development server
+```bash
 npm start
-```
-
-## 📋 Project Structure
-
-```
-ai-content-idea-generator/
-├── client/                  # Frontend React application
-│   ├── public/              # Public assets
-│   ├── src/
-│   │   ├── components/      # Reusable UI components
-│   │   ├── contexts/        # React context for state management
-│   │   ├── hooks/           # Custom React hooks
-│   │   ├── pages/           # Page components
-│   │   ├── services/        # API services
-│   │   ├── utils/           # Utility functions
-│   │   └── App.tsx          # Main App component
-│   └── package.json         # Frontend dependencies
-├── server/                  # Backend Node.js/Express application
-│   ├── src/
-│   │   ├── config/          # Configuration files
-│   │   ├── controllers/     # Route controllers
-│   │   ├── middleware/      # Express middleware
-│   │   ├── models/          # Mongoose models
-│   │   ├── routes/          # API routes
-│   │   ├── services/        # Business logic
-│   │   └── app.js           # Express app
-│   └── package.json         # Backend dependencies
-└── README.md                # Project documentation
 ```
 
 ## 📊 API Endpoints
@@ -131,23 +107,6 @@ ai-content-idea-generator/
 - `PUT /api/calendar/event/:id` - Update calendar event
 - `DELETE /api/calendar/event/:id` - Delete calendar event
 
-## 🔒 Environment Variables
-
-### Backend (.env)
-```
-NODE_ENV=development
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/content-idea-generator
-JWT_SECRET=your_jwt_secret
-OPENAI_API_KEY=your_openai_api_key
-REDIS_URL=redis://localhost:6379
-```
-
-### Frontend (.env)
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
 ## 🧪 Testing
 
 ```bash
@@ -160,20 +119,10 @@ cd client
 npm test
 ```
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 📝 License
 
-## 📫 Contact
-
-Project Link: [https://github.com/dxaginfo/ai-content-idea-generation-platform](https://github.com/dxaginfo/ai-content-idea-generation-platform)
+This project is licensed under the MIT License.
